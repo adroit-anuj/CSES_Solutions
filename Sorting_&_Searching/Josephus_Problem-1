@@ -1,0 +1,30 @@
+#include<iostream>
+#include<queue>
+using namespace std;
+// By Anuj D.
+ 
+void func(){
+    queue<int>Q;
+    int n;cin>>n;
+    for(int i=1;i<=n;i++)
+        Q.push(i);
+    int check = 0;
+    while(1+2==3){
+        if(check){
+            cout<<Q.front()<<" ";
+            Q.pop();
+        }
+        else{
+            Q.push(Q.front());
+            Q.pop();
+        }
+        check = 1-check;
+        if(Q.empty())break;
+    }
+ 
+ 
+}
+ 
+ 
+ 
+int main(){int TC=1;while(TC--)func();}
